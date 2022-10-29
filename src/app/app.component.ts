@@ -9,7 +9,8 @@ export class AppComponent {
   title = 'bytebank';
   transferencias: any[] = [];
   transferir($event: any){
-    this.transferencias.push($event);
+    const transferencia = {...$event, data: new Date()}
+    this.transferencias.push(transferencia)
   }
 }
 
